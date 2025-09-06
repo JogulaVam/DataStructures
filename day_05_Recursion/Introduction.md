@@ -45,7 +45,7 @@ A Tracing Tree (also called Recursion Tree) is a diagrammatic representation of 
 - **Recursion**: A function calls itself (directly or indirectly) until a base condition is 
 met. 
 
-## 3. Key Differences
+## 2. Key Differences
 
 | Aspect              | Loop                                  | Recursion                                                       |
 |---------------------|---------------------------------------|-----------------------------------------------------------------|
@@ -56,6 +56,15 @@ met.
 | **Readability**      | Better for simple repetition          | Better for problems with natural recursive structure (trees, divide & conquer) |
 | **Risk**             | Infinite loop if condition never false | Stack overflow if base case missing                              |
 
+
+---
+
+## Types of Recursion
+- 1 . Tail Recursion
+- 2 . Head Recursion
+- 3 . Direct/Tree Recursion
+- 4 . Indirect Recursion
+- 5 . Nested Recursion
 
 ---
 
