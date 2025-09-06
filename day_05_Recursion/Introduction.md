@@ -60,11 +60,12 @@ met.
 ---
 
 ## Types of Recursion
-- 1 . Tail Recursion
-- 2 . Head Recursion
-- 3 . Direct/Tree Recursion
-- 4 . Indirect Recursion
-- 5 . Nested Recursion
+
+- **Tail Recursion**: The recursive call is the last statement in the function.
+- **Head Recursion**: The recursive call happens before any other operations in the function.
+- **Tree (Direct) Recursion**: A function calls itself more than once in its body, creating a tree-like structure of calls.
+- **Indirect Recursion**: A function calls another function, which eventually calls the original function.
+- **Nested Recursion**: The argument of a recursive function itself involves a recursive call.
 
 ---
 
