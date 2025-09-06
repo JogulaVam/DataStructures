@@ -42,10 +42,20 @@ A Tracing Tree (also called Recursion Tree) is a diagrammatic representation of 
 
 ## 1. Definition
 - **Loop**: A control structure (`for`, `while`, `do-while`) that repeats a block of code until a condition is false.  
-- **Recursion**: A function calls itself (directly or indirectly) until a base condition is met.  
+- **Recursion**: A function calls itself (directly or indirectly) until a base condition is 
+met. 
+
+## 3. Key Differences
+
+| Aspect              | Loop                                  | Recursion                                                       |
+|---------------------|---------------------------------------|-----------------------------------------------------------------|
+| **Control Mechanism** | Uses iteration (`for`, `while`)       | Function calls itself                                            |
+| **Termination**      | Condition in loop header/body         | Base condition                                                   |
+| **Memory Usage**     | Efficient (constant memory)           | Each call adds a stack frame → more memory usage                 |
+| **Performance**      | Usually faster                       | Slower due to function call overhead                             |
+| **Readability**      | Better for simple repetition          | Better for problems with natural recursive structure (trees, divide & conquer) |
+| **Risk**             | Infinite loop if condition never false | Stack overflow if base case missing                              |
+
 
 ---
-
-
-
 
