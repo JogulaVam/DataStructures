@@ -68,4 +68,7 @@ met.
 - **Nested Recursion**: The argument of a recursive function itself involves a recursive call.
 
 ---
+Let us see about types of recursions in detail on the next page.
+
+[➡️ Next: Types of Recursion in Detail](./TypesOfRecursion.md)
 
