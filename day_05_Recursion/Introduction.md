@@ -21,7 +21,7 @@ int main(){
     return 0;
 }
 ```
-#### output for the above code is #### `3 2 1`
+#### output for the above code is `3 2 1` ####
 ![Recursion Flow/ Decision Tree](./Images/example1.png "Recursion Diagram")
 
 
