@@ -7,11 +7,23 @@
 
 
 
-```void fun(int n)
+```
+void fun(int n)
 {
     if(n > 0){
         printf("%d\n", n);
         fun(n-1);
     }
 }
+
+int main(){
+    fun(3);
+    return 0;
+}
 ```
+#### output for the above code is ####
+`3 2 1`
+![Recursion Flow/ Decision Tree](images/recursion.png "Recursion Diagram")
+
+
+
