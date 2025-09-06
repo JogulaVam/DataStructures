@@ -26,7 +26,26 @@ int main() {
 }
 ```
 #### output for the above code is `3 2 1` ####
-![Recursion Flow/ Decision Tree](./Images/example1.png "Recursion Diagram")
+## 🌳 What is a Tracing Tree?
+
+A Tracing Tree (also called Recursion Tree) is a diagrammatic representation of recursive calls made by a function.
+
+- It helps us trace the execution flow step by step.
+
+- Each node in the tree represents a function call.
+
+- The branches show how one function call leads to further recursive calls.
+
+![Recursion Flow/ Tracing tree Tree](./Images/example1.png "Recursion Diagram")
+
+# 🔁 Loops vs 🔄 Recursion
+
+## 1. Definition
+- **Loop**: A control structure (`for`, `while`, `do-while`) that repeats a block of code until a condition is false.  
+- **Recursion**: A function calls itself (directly or indirectly) until a base condition is met.  
+
+---
+
 
 
 
