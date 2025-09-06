@@ -26,8 +26,9 @@ int main() {
 **Output:** `3 2 1`
 
 
-**Tracing Tree:**
+## **Tracing Tree:**
 ![Recursion Flow/ Tracing tree Tree](./Images/example2.png "Recursion Diagram")
+##
 ---
 
 ## 2. Head Recursion
