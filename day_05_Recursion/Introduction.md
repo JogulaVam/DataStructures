@@ -1,23 +1,27 @@
-# Introduction to Recursion
-## What is Recursion?
-### Recursion is a Programming Technique where a function call it self directly or indirectly to solve a Problem.
-###
+# 🔄 Introduction to Recursion
 
-### Example Code snippet ###
+---
 
+## 📌 What is Recursion?
+Recursion is a **programming technique** where a function calls itself, either **directly** or **indirectly**, to solve a problem.  
+It simplifies complex problems by breaking them down into smaller subproblems until a simple **base case** is reached.
 
+---
 
-```
-void fun(int n)
-{
-    if(n > 0){
-        printf("%d\n", n);
-        fun(n-1);
+## 💻 Example Code Snippet (C)
+
+```c
+#include <stdio.h>
+
+void fun(int n) {
+    if (n > 0) {            // base case check
+        printf("%d\n", n);  // print current value
+        fun(n - 1);         // recursive call
     }
 }
 
-int main(){
-    fun(3);
+int main() {
+    fun(3);                 // function call
     return 0;
 }
 ```
