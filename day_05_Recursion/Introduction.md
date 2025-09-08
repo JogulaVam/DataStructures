@@ -38,6 +38,44 @@ A Tracing Tree (also called Recursion Tree) is a diagrammatic representation of 
 
 ![Recursion Flow/ Tracing tree Tree](./Images/example1.png "Recursion Diagram")
 
+The function fun(n) is a simple recursive function that:
+
+Prints the value of n.
+Calls itself with n - 1 until n becomes 0.
+So, for fun(3), the calls will be:
+
+fun(3) → prints 3
+fun(2) → prints 2
+fun(1) → prints 1
+fun(0) → base case, does nothing
+This results in n recursive calls, each doing O(1) work (just a printf). 
+
+🔍 Time Complexity Analysis
+The function fun(n) is a simple recursive function that:
+
+Prints the value of n.
+Calls itself with n - 1 until n becomes 0.
+So, for fun(3), the calls will be:
+
+fun(3) → prints 3
+fun(2) → prints 2
+fun(1) → prints 1
+fun(0) → base case, does nothing
+This results in n recursive calls, each doing O(1) work (just a printf).
+
+✅ Time Complexity: O(n)
+
+🧠 Space Complexity Analysis
+Space complexity in recursive functions is primarily due to the call stack.
+
+Each recursive call adds a new frame to the stack. So for fun(n), the maximum depth of recursion is n.
+
+There are no additional data structures or memory allocations, just the call stack.
+
+✅ Space Complexity: O(n)
+
+
+
 # 🔁 Loops vs 🔄 Recursion
 
 ## 1. Definition

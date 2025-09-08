@@ -2,13 +2,16 @@
 
 ---
 
+
 ## 1. Tail Recursion
 
 In tail recursion, the recursive call is the last operation performed by the function.
 
 All actions or statements are executed before the recursive call, and nothing is left to do after the call returns.
 
-**Example:**
+In case of tail recursion, loops are preferred as we can easily write code in loops by looking at tail recursion code.
+
+### Example:
 ```c
 #include <stdio.h>
 void tailRec(int n) {
@@ -25,10 +28,63 @@ int main() {
 
 **Output:** `3 2 1`
 
+## Tracing Tree:
+![Recursion Flow/ Tracing Tree](./Images/example2.png "Recursion Diagram")
 
-## **Tracing Tree:**
-![Recursion Flow/ Tracing tree Tree](./Images/example2.png "Recursion Diagram")
-##
+---
+
+## Changing above tail recursion into the loop:
+
+```c
+void fun(int n){
+    while(n > 0){
+        printf("%d ", n);
+        n--;
+    }
+}
+```
+
+**Output:** `3 2 1`
+
+---
+
+### 🔍 Time Complexity
+
+The while loop runs as long as `n > 0`. In each iteration:
+
+- It prints the value of `n` (which is an O(1) operation).
+- Then decrements `n` by 1.
+
+So, the loop executes `n` times, doing constant work each time.
+
+✅ **Time Complexity: O(n)**
+
+---
+
+### 🧠 Space Complexity
+
+This version uses iteration, not recursion. So:
+
+- No recursive call stack is created.
+- No additional memory is allocated except for the variable `n`.
+
+✅ **Space Complexity: O(1)**
+
+---
+
+### 📌 Summary
+
+| Complexity Type | Value | Reason               |
+|-----------------|--------|----------------------|
+| Time            | O(n)   | Loop runs `n` times  |
+| Space           | O(1)   | No recursion, constant space |
+
+---
+
+## Conclusion
+
+As you can see, the loop version behaves similarly to the tail recursion version. However, in terms of space complexity, the loop is preferred because it avoids the overhead of recursive stack frames.
+
 ---
 
 ## 2. Head Recursion
