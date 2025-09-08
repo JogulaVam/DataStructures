@@ -165,8 +165,7 @@ void fun(int n){
 ```
 1 2 3
 ```
-## Tracing Tree:
-![Recursion Flow/ Tracing Tree](./Images/example4.png "Recursion Diagram")
+
 ---
 
 ## 🔍 Comparison
@@ -199,7 +198,8 @@ void treeRec(int n) {
 ```
 3 2 1 1 2 1 1
 ```
-
+## Tracing Tree:
+![Recursion Flow/ Tracing Tree](./Images/example4.png "Recursion Diagram")
 
 ---
 
