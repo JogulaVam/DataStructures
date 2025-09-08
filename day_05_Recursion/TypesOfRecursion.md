@@ -218,10 +218,10 @@ $$
 Ignoring the `printf` operation and focusing on the number of calls:
 
 - **T(0) = 0** (base case)
-- **T(1) = 2 \cdot T(0) + 1 = 1**
-- **T(2) = 2 \cdot T(1) + 1 = 3**
-- **T(3) = 2 \cdot T(2) + 1 = 7**
-- **T(4) = 2 \cdot T(3) + 1 = 15**
+- **T(1) = 2 \* T(0) + 1 = 1**
+- **T(2) = 2 \* T(1) + 1 = 3**
+- **T(3) = 2 \* T(2) + 1 = 7**
+- **T(4) = 2 \* T(3) + 1 = 15**
 
 This forms a pattern:
 
