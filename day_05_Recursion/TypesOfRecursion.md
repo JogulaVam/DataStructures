@@ -289,7 +289,8 @@ void funB(int n) {
 ## Ouput funA(20) is ``` 20 19 9 8 4 3 1 ``` ##
 
 ## Tracing Tree:
-![Recursion Flow/ Tracing Tree](./Images/example5.png "Recursion Diagram")
+![Recursion Flow/ Tracing Tree](./Images/example5.png "Recursion Diagram") 
+##
 
 
 ### 🔍 Execution Flow for `funA(20)`:
