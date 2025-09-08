@@ -87,21 +87,6 @@ As you can see, the loop version behaves similarly to the tail recursion version
 
 ---
 
-## 2. Head Recursion
-
-In head recursion, the recursive call happens before any other operations in the function.
-
-**Example:**
-```c
-#include <stdio.h>
-void headRec(int n) {
-    if (n == 0) return;
-    headRec(n - 1); // Recursive call happens first
-    printf("%d ", n);
-}
-```
-
-
 ## 🔁 2. Head Recursion
 
 ### 📌 Definition:
@@ -185,6 +170,8 @@ void fun(int n){
 
 ## 🌳 Tree Recursion
 
+In Tree recursion it will call itself more than 1 time.
+
 ### ✅ Code:
 ```c
 void treeRec(int n) {
@@ -263,8 +250,6 @@ So:
 | **Total Calls**      | $$2^n - 1$$               |
 | **Time Complexity**  | **O(2ⁿ)**                 |
 | **Space Complexity** | **O(n)** (stack depth)    |
-
----
 
 ---
 
