@@ -165,7 +165,8 @@ void fun(int n){
 ```
 1 2 3
 ```
-
+## Tracing Tree:
+![Recursion Flow/ Tracing Tree](./Images/example4.png "Recursion Diagram")
 ---
 
 ## 🔍 Comparison
@@ -183,13 +184,10 @@ void fun(int n){
 
 ---
 
-## 3. Tree (Direct) Recursion
+## 🌳 Tree Recursion
 
-A function calls itself more than once in its body, creating a tree-like structure of calls.
-
-**Example:**
+### ✅ Code:
 ```c
-#include <stdio.h>
 void treeRec(int n) {
     if (n == 0) return;
     printf("%d ", n);
@@ -197,6 +195,76 @@ void treeRec(int n) {
     treeRec(n - 1); // Second recursive call
 }
 ```
+### 🖨️ Output: when n = 3
+```
+3 2 1 1 2 1 1
+```
+
+
+---
+
+## 🔢 Total Number of Calls
+
+Let’s denote the number of calls as **T(n)**.
+
+Each call to `treeRec(n)` makes **2 recursive calls** to `treeRec(n - 1)`, until `n == 0`.
+
+So the recurrence relation is:
+
+$$
+T(n) = 2 \cdot T(n - 1) + 1
+$$
+
+Ignoring the `printf` operation and focusing on the number of calls:
+
+- **T(0) = 0** (base case)
+- **T(1) = 2 \cdot T(0) + 1 = 1**
+- **T(2) = 2 \cdot T(1) + 1 = 3**
+- **T(3) = 2 \cdot T(2) + 1 = 7**
+- **T(4) = 2 \cdot T(3) + 1 = 15**
+
+This forms a pattern:
+
+$$
+T(n) = 2^n - 1
+$$
+
+### ✅ So, total number of calls for `treeRec(n)` is:
+**2ⁿ − 1**
+
+---
+
+## ⏱️ Time Complexity
+
+Each call does a constant amount of work (`printf`) and makes 2 recursive calls.
+
+So the time complexity is:
+
+### **O(2ⁿ)**
+
+---
+
+## 🧠 Space Complexity
+
+Space complexity depends on the **maximum depth of the recursion stack**.
+
+Since each call makes two recursive calls, but they are made **sequentially**, not simultaneously, the maximum depth is **n**.
+
+So:
+
+### **O(n)** — due to the call stack depth
+
+---
+
+## 📊 Summary
+
+| Metric               | Value                     |
+|----------------------|---------------------------|
+| **Total Calls**      | $$2^n - 1$$               |
+| **Time Complexity**  | **O(2ⁿ)**                 |
+| **Space Complexity** | **O(n)** (stack depth)    |
+
+---
 
 ---
 
