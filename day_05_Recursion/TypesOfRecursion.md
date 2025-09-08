@@ -268,15 +268,11 @@ So:
 
 ---
 
-## 4. Indirect Recursion
 
-A function calls another function, which eventually calls the original function.
+## 🔁 Indirect Recursion
 
-**Example:**
+### ✅ Code Summary:
 ```c
-#include <stdio.h>
-void funB(int n); // Forward declaration
-
 void funA(int n) {
     if (n == 0) return;
     printf("%d ", n);
@@ -286,9 +282,70 @@ void funA(int n) {
 void funB(int n) {
     if (n == 0) return;
     printf("%d ", n);
-    funA(n - 1);
+    funA(n / 2);
 }
 ```
+
+##Ouput funA(20) is ``` 20 19 9 8 4 3 1 ``` ##
+
+## Tracing Tree:
+![Recursion Flow/ Tracing Tree](./Images/example5.png "Recursion Diagram")
+
+
+### 🔍 Execution Flow for `funA(20)`:
+Let’s trace the calls step-by-step:
+
+1. `funA(20)` → prints 20 → calls `funB(19)`
+2. `funB(19)` → prints 19 → calls `funA(9)`
+3. `funA(9)` → prints 9 → calls `funB(8)`
+4. `funB(8)` → prints 8 → calls `funA(4)`
+5. `funA(4)` → prints 4 → calls `funB(3)`
+6. `funB(3)` → prints 3 → calls `funA(1)`
+7. `funA(1)` → prints 1 → calls `funB(0)`
+8. `funB(0)` → returns (base case)
+
+### 🧮 Total Number of Calls:
+Each function alternates and reduces `n` either by `n - 1` or `n / 2`. The recursion ends when `n == 0`.
+
+From the trace above, we see:
+- Calls: `funA(20)`, `funB(19)`, `funA(9)`, `funB(8)`, `funA(4)`, `funB(3)`, `funA(1)`, `funB(0)`
+- **Total calls = 8**
+
+---
+
+## ⏱️ Time Complexity
+
+Let’s denote the number of calls as a function of `n`.
+
+- `funA(n)` calls `funB(n - 1)`
+- `funB(n)` calls `funA(n / 2)`
+
+This creates a **non-linear recursive chain**, but the depth is limited due to the rapid reduction in `n`.
+
+Let’s approximate the number of calls as:
+
+### **O(log n)** — because `n` is halved in some steps (`n / 2`), which dominates the recursion depth.
+
+---
+
+## 🧠 Space Complexity
+
+Each recursive call adds a frame to the call stack. Since the calls alternate and go down to `n == 0`, the **maximum depth** of the call stack is equal to the number of calls.
+
+So:
+
+### **O(log n)** — due to the recursive depth from alternating calls and halving `n`.
+
+---
+
+## 📊 Summary
+
+| Metric               | Value                      |
+|----------------------|----------------------------|
+| **Total Calls**      | 8 (for `funA(20)`)         |
+| **Time Complexity**  | **O(log n)**               |
+| **Space Complexity** | **O(log n)** (stack depth) |
+
 
 ---
 
