@@ -101,6 +101,86 @@ void headRec(int n) {
 }
 ```
 
+
+## 🔁 2. Head Recursion
+
+### 📌 Definition:
+In **head recursion**, the recursive call is made **before** any other operations in the function. This means the function keeps calling itself until it reaches the base case, and only then does it start executing the remaining statements **after** the recursive calls return.
+
+---
+
+### ✅ Example in C:
+```c
+#include <stdio.h>
+
+void headRec(int n) {
+    if (n == 0) return;
+    headRec(n - 1); // Recursive call happens first
+    printf("%d ", n); // Executed after recursive call returns
+}
+
+int main() {
+    headRec(3);
+    return 0;
+}
+```
+
+### 🧠 Execution Flow:
+Let’s break down how `headRec(3)` works:
+
+1. `headRec(3)` calls `headRec(2)`
+2. `headRec(2)` calls `headRec(1)`
+3. `headRec(1)` calls `headRec(0)`
+4. `headRec(0)` hits the base case and returns
+5. Now the calls start returning:
+   - `headRec(1)` prints `1`
+   - `headRec(2)` prints `2`
+   - `headRec(3)` prints `3`
+
+### 🖨️ Output:
+```
+1 2 3
+```
+## Tracing Tree:
+![Recursion Flow/ Tracing Tree](./Images/example3.png "Recursion Diagram")
+---
+
+## 🔄 Head Recursion vs Loop
+
+### 🧾 Loop Version:
+```c
+void fun(int n){
+    int i = 1;
+    while(i <= n){
+        printf("%d ", i);
+        i++;
+    }
+}
+```
+
+### 🧠 Execution Flow:
+- The loop runs from `i = 1` to `n`, printing each value directly.
+
+### 🖨️ Output:
+```
+1 2 3
+```
+
+---
+
+## 🔍 Comparison
+
+| Feature              | Head Recursion                          | Loop                                 |
+|----------------------|------------------------------------------|--------------------------------------|
+| **Control Flow**     | Function calls itself before doing work | Iterative, uses loop control         |
+| **Memory Usage**     | Uses call stack (can be expensive)      | Efficient, uses constant memory      |
+| **Execution Order**  | Bottom-up (work done after recursion)   | Top-down (work done immediately)     |
+| **Readability**      | Good for problems with recursive nature | Easier for simple repetitive tasks   |
+| **Performance**      | Slower due to overhead of recursion     | Faster and more efficient            |
+
+---
+
+
 ---
 
 ## 3. Tree (Direct) Recursion
